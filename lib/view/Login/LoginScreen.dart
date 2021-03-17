@@ -2,13 +2,13 @@
  * @Author: zhangzheng
  * @Date: 2020-12-30 16:12:19
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-01-13 15:10:31
+ * @LastEditTime: 2021-03-17 14:45:54
  * @Descripttion: 登陆页面
  */
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:todo/widgets/GradientButton.dart';
-import 'package:todo/routes/navigatorUtil.dart';
+import 'package:todo_app/widgets/GradientButton.dart';
+import 'package:todo_app/routes/navigatorUtil.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -25,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (_formKey.currentState.validate()) {
       Histroy().push(
         context: context,
-        path: '/login',
+        path: '/initial',
       );
     } else {
       print('校验失败');

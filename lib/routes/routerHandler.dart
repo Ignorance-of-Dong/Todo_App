@@ -1,7 +1,16 @@
+/*
+ * @Author: zhangzheng
+ * @Date: 2021-01-15 17:10:57
+ * @LastEditors: zhangzheng
+ * @LastEditTime: 2021-03-15 17:01:57
+ * @Descripttion: 
+ */
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import '../view/Login/LoginScreen.dart';
 import '../view/Register/RegisterScreen.dart';
+import "../view/Initial/InitialScreen.dart";
+import '../view/MyProfile/MyProfileScreen.dart';
 
 // 路由模块获取，以及获取传递参
 
@@ -19,6 +28,22 @@ var registerHandler = new Handler(
   print(params);
   // Application.router.navigateTo(context, path)
   return new RegisterScreen();
+});
+
+// 登陆后初始页
+var initialHandler = new Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  print(params);
+  // Application.router.navigateTo(context, path)
+  return new InitialScreen();
+});
+
+// 个人资料
+var myProfileHandler = new Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  print(params);
+  // Application.router.navigateTo(context, path)
+  return new MyProfileScreen();
 });
 
 // 登录页 => 密码

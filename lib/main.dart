@@ -2,7 +2,7 @@
  * @Author: zhangzheng
  * @Date: 2020-12-30 11:09:57
  * @LastEditors: zhangzheng
- * @LastEditTime: 2020-12-30 16:58:44
+ * @LastEditTime: 2021-03-16 11:34:00
  * @Descripttion: 
  */
 import 'package:flutter/material.dart';
@@ -15,6 +15,8 @@ void main() {
   runApp(MyApp());
 }
 
+const PrimaryColor = const Color(0xFF151026);
+
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -22,11 +24,11 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
         designSize: Size(750, 1334),
         allowFontScaling: false,
-        child: MaterialApp(
+        builder: () => MaterialApp(
             debugShowCheckedModeBanner: false, // 取消右上角debug标志
             title: 'Todo',
             theme: ThemeData(
-              primarySwatch: Colors.blue,
+              primaryColor: PrimaryColor,
               visualDensity: VisualDensity.adaptivePlatformDensity,
             ),
             home: HomeScreen()));

@@ -2,11 +2,11 @@
  * @Author: zhangzheng
  * @Date: 2020-04-24 19:03:38
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-01-05 17:44:31
+ * @LastEditTime: 2021-03-16 11:34:54
  * @Descripttion: 水波纹按钮
  */
 import 'package:flutter/material.dart';
-import 'package:todo/utils/lcfarmSize.dart';
+import 'package:todo_app/utils/lcfarmSize.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /*
@@ -73,12 +73,13 @@ class _GradientButtonState extends State<GradientButton> {
           border: Border.all(color: borderColor, width: 3.w),
           color: contextcolor,
           borderRadius: BorderRadius.circular(borderRadius)),
-      child: RaisedButton(
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(borderRadius)),
-        color: Colors.transparent, // 设为透明色
-        elevation: 0, // 正常时阴影隐藏
-        highlightElevation: 0, // 点击时阴影隐藏
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(borderRadius)),
+          primary: Colors.transparent, // 设为透明色
+          elevation: 0, // 正常时阴影隐藏
+        ),
         onPressed: handelClick,
         child: Container(
           alignment: Alignment.center,

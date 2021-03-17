@@ -8,8 +8,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:todo/widgets/GradientButton.dart';
-import 'package:todo/routes/navigatorUtil.dart';
+import 'package:todo_app/widgets/GradientButton.dart';
+import 'package:todo_app/routes/navigatorUtil.dart';
 
 class RegisterScreen extends StatefulWidget {
   @override

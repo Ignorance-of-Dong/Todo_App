@@ -2,8 +2,8 @@
  * @Author: zhangzheng
  * @Date: 2020-12-30 16:12:19
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-16 11:34:17
- * @Descripttion: s首页
+ * @LastEditTime: 2021-03-17 15:16:47
+ * @Descripttion: 初始页面
  */
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,13 +11,14 @@ import 'dart:async';
 import 'package:date_format/date_format.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:todo_app/routes/navigatorUtil.dart';
+import 'package:todo_app/components/Drawer/DrawerCom.dart';
 
-class HomeScreen extends StatefulWidget {
+class InitialScreen extends StatefulWidget {
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _InitialScreenState createState() => _InitialScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _InitialScreenState extends State<InitialScreen> {
   final ValueNotifier<String> currentTime = ValueNotifier<String>("1");
   @override
   void initState() {
@@ -31,6 +32,24 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: Builder(
+          builder: (ctx) => ElevatedButton(
+            style: ButtonStyle(
+                backgroundColor:
+                    ButtonStyleButton.allOrNull<Color>(Color(0xFF151026))),
+            onPressed: () => {Scaffold.of(ctx).openDrawer()},
+            child: Icon(
+              Icons.reorder,
+              color: Colors.white,
+            ),
+          ),
+        ),
+        title: Text('Todo'),
+        centerTitle: true,
+        brightness: Brightness.dark,
+      ),
+      drawer: DrawerCom(context: context),
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
