@@ -2,15 +2,15 @@
  * @Author: zhangzheng
  * @Date: 2021-01-15 17:10:57
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-15 17:01:57
+ * @LastEditTime: 2021-03-23 16:20:24
  * @Descripttion: 
  */
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import '../view/Login/LoginScreen.dart';
-import '../view/Register/RegisterScreen.dart';
-import "../view/Initial/InitialScreen.dart";
-import '../view/MyProfile/MyProfileScreen.dart';
+import '../View/Login/LoginScreen.dart';
+import '../View/Register/RegisterScreen.dart';
+import "../View/Initial/InitialScreen.dart";
+import '../View/MyProfile/MyProfileScreen.dart';
 
 // 路由模块获取，以及获取传递参
 

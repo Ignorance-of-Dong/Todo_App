@@ -10,7 +10,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'dart:async';
 import 'package:date_format/date_format.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:todo_app/routes/navigatorUtil.dart';
+import 'package:todo_app/Routes/navigatorUtil.dart';
 import 'package:todo_app/components/Drawer/DrawerCom.dart';
 
 class InitialScreen extends StatefulWidget {

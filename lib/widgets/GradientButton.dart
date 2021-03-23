@@ -2,11 +2,10 @@
  * @Author: zhangzheng
  * @Date: 2020-04-24 19:03:38
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-16 11:34:54
+ * @LastEditTime: 2021-03-23 16:19:31
  * @Descripttion: 水波纹按钮
  */
 import 'package:flutter/material.dart';
-import 'package:todo_app/utils/lcfarmSize.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /*
@@ -56,7 +55,6 @@ class _GradientButtonState extends State<GradientButton> {
   void initState() {
     this.contextcolor = widget.contextcolor ?? this.contextcolor;
     this.context = widget.context ?? this.context;
-    LcfarmSize.getInstance().init(context);
     this.handelClick = widget.handelClick ?? this.handelClick;
     this.text = widget.text ?? this.text;
     this.textColor = widget.textColor ?? this.textColor;

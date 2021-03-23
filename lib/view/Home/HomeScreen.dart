@@ -2,7 +2,7 @@
  * @Author: zhangzheng
  * @Date: 2020-12-30 16:12:19
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-16 11:34:17
+ * @LastEditTime: 2021-03-23 16:18:16
  * @Descripttion: s首页
  */
 import 'package:flutter/material.dart';
@@ -10,7 +10,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'dart:async';
 import 'package:date_format/date_format.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:todo_app/routes/navigatorUtil.dart';
+import 'package:todo_app/Routes/navigatorUtil.dart';
 
 class HomeScreen extends StatefulWidget {
   @override

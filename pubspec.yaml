@@ -30,6 +30,7 @@ dependencies:
   adaptive_dialog: ^0.10.0+5
   date_time_picker: ^2.0.0
   flutter_city_picker: ^0.0.3
+  provider: ^4.3.2+1
 
   toast: ^0.1.5
   dio: ^3.0.10
