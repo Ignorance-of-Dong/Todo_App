@@ -2,7 +2,7 @@
  * @Author: zhangzheng
  * @Date: 2021-03-19 11:38:51
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-24 14:21:54
+ * @LastEditTime: 2021-03-24 17:10:54
  * @Descripttion: 
  */
 import 'package:flutter/material.dart';
@@ -50,7 +50,7 @@ Widget homeBuilderContainer(BuildContext context, Widget leading, Widget drawer,
     body: Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
-      child: Column(
+      child: Stack(
         children: childern,
       ),
     ),

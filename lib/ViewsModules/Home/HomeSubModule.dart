@@ -2,7 +2,7 @@
  * @Author: zhangzheng
  * @Date: 2021-03-24 10:52:45
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-24 14:43:27
+ * @LastEditTime: 2021-03-24 18:19:36
  * @Descripttion: 
  */
 
@@ -11,6 +11,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:todo_app/Controller/Home/HomeController.dart';
 import 'package:todo_app/Controller/MyProfile/MyProfileController.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_weather_bg/flutter_weather_bg.dart';
 
 // 首页左上角lead
 Widget homeLeadingWidget(BuildContext context) {
@@ -186,5 +187,16 @@ Widget drawerSettingGroup(BuildContext context) {
         ),
       ],
     ),
+  );
+}
+
+// 天气背景
+Widget weatherBackground(BuildContext context) {
+  var appbarHeight = AppBar().preferredSize.height;
+  return Positioned(
+    child: WeatherBg(
+        weatherType: WeatherType.hazy,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height - appbarHeight),
   );
 }
