@@ -2,7 +2,7 @@
  * @Author: zhangzheng
  * @Date: 2021-03-19 11:52:05
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-23 16:42:12
+ * @LastEditTime: 2021-03-23 18:14:00
  * @Descripttion: 登陆页UI模块
  */
 import 'package:flutter/material.dart';
@@ -19,7 +19,7 @@ Widget loginTitleWidget() {
     width: 240.r,
     height: 240.r,
     child: Text(
-      'TODO',
+      'TODOa',
       style: TextStyle(fontSize: 84.sp, height: 2.5),
     ),
   );

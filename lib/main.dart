@@ -2,17 +2,18 @@
  * @Author: zhangzheng
  * @Date: 2020-12-30 11:09:57
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-23 16:17:52
+ * @LastEditTime: 2021-03-24 11:10:05
  * @Descripttion: main
  */
 import 'package:flutter/material.dart';
-import 'view/Home/HomeScreen.dart';
+import 'view/Initial/InitialScreen.dart';
 import 'Routes/navigatorUtil.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_app/Controller/Login/LoginController.dart';
 import 'package:todo_app/Controller/Register/RegisterController.dart';
 import 'package:todo_app/Controller/MyProfile/MyProfileController.dart';
+import 'package:todo_app/Controller/Home/HomeController.dart';
 
 void main() {
   Histroy();
@@ -20,7 +21,8 @@ void main() {
     providers: [
       ChangeNotifierProvider(create: (_) => LoginController()),
       ChangeNotifierProvider(create: (_) => RegisterController()),
-      ChangeNotifierProvider(create: (_) => MyProfileController())
+      ChangeNotifierProvider(create: (_) => MyProfileController()),
+      ChangeNotifierProvider(create: (_) => HomeController())
     ],
     child: MyApp(),
   ));
@@ -42,6 +44,6 @@ class MyApp extends StatelessWidget {
               primaryColor: PrimaryColor,
               visualDensity: VisualDensity.adaptivePlatformDensity,
             ),
-            home: HomeScreen()));
+            home: InitialScreen()));
   }
 }

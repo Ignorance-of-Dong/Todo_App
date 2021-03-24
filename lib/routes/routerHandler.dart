@@ -2,14 +2,14 @@
  * @Author: zhangzheng
  * @Date: 2021-01-15 17:10:57
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-23 16:20:24
+ * @LastEditTime: 2021-03-24 10:39:41
  * @Descripttion: 
  */
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import '../View/Login/LoginScreen.dart';
 import '../View/Register/RegisterScreen.dart';
-import "../View/Initial/InitialScreen.dart";
+import '../View/Home/HomeScreen.dart';
 import '../View/MyProfile/MyProfileScreen.dart';
 
 // 路由模块获取，以及获取传递参
@@ -22,7 +22,7 @@ var loginHandler = new Handler(
   return new LoginScreen();
 });
 
-// 登录页
+// 注册页
 var registerHandler = new Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   print(params);
@@ -30,12 +30,12 @@ var registerHandler = new Handler(
   return new RegisterScreen();
 });
 
-// 登陆后初始页
-var initialHandler = new Handler(
+// 初始页面
+var homeHandler = new Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   print(params);
   // Application.router.navigateTo(context, path)
-  return new InitialScreen();
+  return new HomeScreen();
 });
 
 // 个人资料

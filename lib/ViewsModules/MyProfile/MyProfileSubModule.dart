@@ -2,7 +2,7 @@
  * @Author: zhangzheng
  * @Date: 2021-03-23 15:15:30
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-23 16:11:53
+ * @LastEditTime: 2021-03-24 14:49:09
  * @Descripttion: 我的信息子模块
  */
 
@@ -70,7 +70,6 @@ Widget myProfileGenderWidget(BuildContext context) {
   var gender = context.watch<MyProfileController>().nickName;
   var changeGender = context.read<MyProfileController>().changeGender;
   return ListTile(
-      //第一个功能项
       title: new Text('性别'),
       trailing: Container(
         alignment: Alignment.centerRight,
@@ -147,7 +146,6 @@ Widget myProfileSchoolWidge(BuildContext context) {
   var school = context.watch<MyProfileController>().school;
   var showSchoolDialog = context.read<MyProfileController>().showSchoolDialog;
   return ListTile(
-      //第一个功能项
       title: new Text('大学'),
       trailing: Container(
         alignment: Alignment.centerRight,
@@ -168,7 +166,6 @@ Widget myProfileInfoWidge(BuildContext context) {
   var info = context.watch<MyProfileController>().info;
   var showInfoDialog = context.read<MyProfileController>().showInfoDialog;
   return ListTile(
-      //第一个功能项
       title: new Text('简介'),
       trailing: Container(
         alignment: Alignment.centerRight,
@@ -182,4 +179,11 @@ Widget myProfileInfoWidge(BuildContext context) {
       onTap: () {
         showInfoDialog(context);
       });
+}
+
+Widget dividerWidget(BuildContext context) {
+  return Container(
+      width: MediaQuery.of(context).size.width,
+      height: 20.r,
+      color: Color.fromRGBO(220, 220, 220, 1));
 }

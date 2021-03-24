@@ -2,7 +2,7 @@
  * @Author: zhangzheng
  * @Date: 2020-12-30 16:12:19
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-23 16:10:45
+ * @LastEditTime: 2021-03-24 14:49:32
  * @Descripttion: 我的资料
  */
 import 'package:flutter/material.dart';
@@ -26,6 +26,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
       myProfileAvatarWidget(context),
       myProfileNickNameWidget(context),
       myProfileGenderWidget(context),
+      dividerWidget(context),
       myProfileBirthdayWidget(context),
       myProfileCityWidge(context),
       myProfileSchoolWidge(context),

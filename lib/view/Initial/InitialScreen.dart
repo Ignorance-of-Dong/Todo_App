@@ -2,7 +2,7 @@
  * @Author: zhangzheng
  * @Date: 2020-12-30 16:12:19
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-17 15:16:47
+ * @LastEditTime: 2021-03-24 10:45:19
  * @Descripttion: 初始页面
  */
 import 'package:flutter/material.dart';
@@ -11,7 +11,6 @@ import 'dart:async';
 import 'package:date_format/date_format.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:todo_app/Routes/navigatorUtil.dart';
-import 'package:todo_app/components/Drawer/DrawerCom.dart';
 
 class InitialScreen extends StatefulWidget {
   @override
@@ -19,7 +18,8 @@ class InitialScreen extends StatefulWidget {
 }
 
 class _InitialScreenState extends State<InitialScreen> {
-  final ValueNotifier<String> currentTime = ValueNotifier<String>("1");
+  final ValueNotifier<String> currentTime =
+      ValueNotifier<String>(formatDate(DateTime.now(), [HH, ':', nn, ':', ss]));
   @override
   void initState() {
     const period = const Duration(seconds: 1);
@@ -32,32 +32,9 @@ class _InitialScreenState extends State<InitialScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Builder(
-          builder: (ctx) => ElevatedButton(
-            style: ButtonStyle(
-                backgroundColor:
-                    ButtonStyleButton.allOrNull<Color>(Color(0xFF151026))),
-            onPressed: () => {Scaffold.of(ctx).openDrawer()},
-            child: Icon(
-              Icons.reorder,
-              color: Colors.white,
-            ),
-          ),
-        ),
-        title: Text('Todo'),
-        centerTitle: true,
-        brightness: Brightness.dark,
-      ),
-      drawer: DrawerCom(context: context),
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        // decoration: BoxDecoration(
-        //     gradient: LinearGradient(
-        //         colors: [Color(0x00AAFF66), Color(0xA6D9F366)],
-        //         begin: Alignment.topCenter,
-        //         end: Alignment.bottomCenter)),
         child: Column(
           children: [
             ValueListenableBuilder(
