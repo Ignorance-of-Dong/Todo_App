@@ -2,7 +2,7 @@
  * @Author: zhangzheng
  * @Date: 2020-12-30 11:09:57
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-24 11:10:05
+ * @LastEditTime: 2021-04-02 14:49:39
  * @Descripttion: main
  */
 import 'package:flutter/material.dart';
@@ -14,6 +14,9 @@ import 'package:todo_app/Controller/Login/LoginController.dart';
 import 'package:todo_app/Controller/Register/RegisterController.dart';
 import 'package:todo_app/Controller/MyProfile/MyProfileController.dart';
 import 'package:todo_app/Controller/Home/HomeController.dart';
+import 'package:todo_app/Controller/RecipesList/RecipesListController.dart';
+import 'package:todo_app/Controller/RecipesDetail/RecipesDetailController.dart';
+import 'package:todo_app/Controller/RecipesSearch/RecipesSearchController.dart';
 
 void main() {
   Histroy();
@@ -22,7 +25,10 @@ void main() {
       ChangeNotifierProvider(create: (_) => LoginController()),
       ChangeNotifierProvider(create: (_) => RegisterController()),
       ChangeNotifierProvider(create: (_) => MyProfileController()),
-      ChangeNotifierProvider(create: (_) => HomeController())
+      ChangeNotifierProvider(create: (_) => HomeController()),
+      ChangeNotifierProvider(create: (_) => RecipesListController()),
+      ChangeNotifierProvider(create: (_) => RecipesDetailController()),
+      ChangeNotifierProvider(create: (_) => RecipesSearchController())
     ],
     child: MyApp(),
   ));

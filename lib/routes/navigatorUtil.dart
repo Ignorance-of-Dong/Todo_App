@@ -2,7 +2,7 @@
  * @Author: zhangzheng
  * @Date: 2020-12-30 11:44:35
  * @LastEditors: zhangzheng
- * @LastEditTime: 2020-12-30 15:34:26
+ * @LastEditTime: 2021-03-25 16:34:32
  * @Descripttion: 
  */
 import './application.dart';
@@ -20,7 +20,7 @@ class Histroy {
 
   push({context, path, clearStack = false}) {
     ininState();
-    return Application.router.navigateTo(context, path);
+    return jump(context, path);
   }
 
   // 返回

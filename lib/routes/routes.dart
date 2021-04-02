@@ -2,7 +2,7 @@
  * @Author: zhangzheng
  * @Date: 2020-04-17 14:07:32
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-24 10:40:38
+ * @LastEditTime: 2021-04-02 11:34:29
  * @Descripttion: 定义路由模块
  */
 import 'package:flutter/material.dart';
@@ -26,6 +26,9 @@ class Routes {
     router.define('/register', handler: registerHandler);
     router.define('/initial', handler: homeHandler);
     router.define('/myProfile', handler: myProfileHandler);
+    router.define('/recipesList', handler: recipesListHandler);
+    router.define('/recipesDetail', handler: recipesDetailHandler);
+    router.define('/recipesSearch', handler: recipesSearchHandler);
     // ================Router================
   }
 }

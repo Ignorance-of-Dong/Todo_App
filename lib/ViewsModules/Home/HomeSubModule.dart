@@ -2,7 +2,7 @@
  * @Author: zhangzheng
  * @Date: 2021-03-24 10:52:45
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-24 18:19:36
+ * @LastEditTime: 2021-04-02 16:23:36
  * @Descripttion: 
  */
 
@@ -113,6 +113,7 @@ Widget drawerUserInfoWidget(BuildContext context) {
 
 // 侧边栏功能组
 Widget drawerFunctionalGroup(BuildContext context) {
+  var goRecipesList = context.read<HomeController>().goRecipesList;
   return Container(
     width: MediaQuery.of(context).size.width,
     margin: EdgeInsets.fromLTRB(20.r, 50.r, 20.r, 0),
@@ -131,12 +132,10 @@ Widget drawerFunctionalGroup(BuildContext context) {
       children: [
         new ListTile(
             //第一个功能项
-            title: new Text('First Page'),
+            title: new Text('食谱'),
             trailing: new Icon(Icons.arrow_upward),
             onTap: () {
-              // Navigator.of(context).pop();
-              // Navigator.of(context).push(new MaterialPageRoute(
-              //     builder: (BuildContext context) => new SidebarPage()));
+              goRecipesList(context);
             }),
         new ListTile(
             //第二个功能项
@@ -195,7 +194,7 @@ Widget weatherBackground(BuildContext context) {
   var appbarHeight = AppBar().preferredSize.height;
   return Positioned(
     child: WeatherBg(
-        weatherType: WeatherType.hazy,
+        weatherType: WeatherType.heavySnow,
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height - appbarHeight),
   );

@@ -2,7 +2,7 @@
  * @Author: zhangzheng
  * @Date: 2020-12-30 16:12:19
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-24 18:19:46
+ * @LastEditTime: 2021-04-02 16:02:41
  * @Descripttion: 首页
  */
 import 'package:flutter/material.dart';
@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
         [
           weatherBackground(context),
           Container(
-            child: Text('111'),
+            child: Text(''),
           )
         ]);
   }

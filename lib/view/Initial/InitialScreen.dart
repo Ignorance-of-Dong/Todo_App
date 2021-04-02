@@ -2,7 +2,7 @@
  * @Author: zhangzheng
  * @Date: 2020-12-30 16:12:19
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-24 10:45:19
+ * @LastEditTime: 2021-04-02 16:24:35
  * @Descripttion: 初始页面
  */
 import 'package:flutter/material.dart';
@@ -35,7 +35,8 @@ class _InitialScreenState extends State<InitialScreen> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        child: Column(
+        child: Flex(
+          direction: Axis.vertical,
           children: [
             ValueListenableBuilder(
                 valueListenable: currentTime,
@@ -58,13 +59,13 @@ class _InitialScreenState extends State<InitialScreen> {
                   textStyle: TextStyle(fontSize: 30.sp, fontFamily: "Bobbers"),
                   textAlign: TextAlign.center,
                 )),
-            Container(
-              height: 600.h,
+            Expanded(
+              flex: 1,
               child: Stack(
                 alignment: AlignmentDirectional.center,
                 children: [
                   Positioned(
-                      bottom: 0,
+                      bottom: 300.r,
                       child: GestureDetector(
                         onTap: () =>
                             {Histroy().push(context: context, path: '/login')},

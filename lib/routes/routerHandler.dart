@@ -2,15 +2,18 @@
  * @Author: zhangzheng
  * @Date: 2021-01-15 17:10:57
  * @LastEditors: zhangzheng
- * @LastEditTime: 2021-03-24 10:39:41
+ * @LastEditTime: 2021-04-02 11:41:29
  * @Descripttion: 
  */
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import '../View/Login/LoginScreen.dart';
-import '../View/Register/RegisterScreen.dart';
-import '../View/Home/HomeScreen.dart';
-import '../View/MyProfile/MyProfileScreen.dart';
+import 'package:todo_app/View/Login/LoginScreen.dart';
+import 'package:todo_app/View/Register/RegisterScreen.dart';
+import 'package:todo_app/View/Home/HomeScreen.dart';
+import 'package:todo_app/View/MyProfile/MyProfileScreen.dart';
+import 'package:todo_app/View/RecipesList/RecipesListScreen.dart';
+import 'package:todo_app/View/RecipesDetail/RecipesDetailScreen.dart';
+import 'package:todo_app/View/RecipesSearch/RecipesSearchScreen.dart';
 
 // 路由模块获取，以及获取传递参
 
@@ -46,6 +49,26 @@ var myProfileHandler = new Handler(
   return new MyProfileScreen();
 });
 
+// 食谱列表
+var recipesListHandler = new Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  print(params);
+  // Application.router.navigateTo(context, path)
+  return new RecipesListScreen();
+});
+// 食谱列表
+var recipesDetailHandler = new Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+  print(params['id']);
+  // Application.router.navigateTo(context, path)
+  return new RecipesDetailScreen(id: params['id'][0]);
+});
+// 食谱查询
+var recipesSearchHandler = new Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+  // Application.router.navigateTo(context, path)
+  return new RecipesSearchScreen();
+});
 // 登录页 => 密码
 // var pwdHandler = new Handler(
 //     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
